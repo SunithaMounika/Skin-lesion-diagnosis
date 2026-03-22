@@ -9,6 +9,8 @@ import numpy as np
 # --- 1. Configuration & Setup ---
 st.set_page_config(page_title="Skin Lesion Diagnostic AI", layout="centered")
 
+# Configure Generative AI (Google Gemini) for Multilingual Explanations
+# Replace 'YOUR_API_KEY' with your actual Google AI Studio API Key
 # Read API Key from Streamlit Secrets
 try:
     api_key = st.secrets["GEMINI_API_KEY"]
@@ -16,8 +18,9 @@ try:
 except KeyError:
     st.error("API Key not found in Secrets. Please configure GEMINI_API_KEY in Streamlit settings.")
 
-# Use the 2026-appropriate model
-model_genai = genai.GenerativeModel('gemini-3-flash-preview')
+# Use the 2026-appropriate mode
+model_genai = genai.GenerativeModel('gemini-3-flash')
+
 # Classes based on common skin lesion datasets (e.g., HAM10000)
 CLASS_NAMES = [
     "Actinic keratoses", "Basal cell carcinoma", "Benign keratosis-like lesions", 
