@@ -19,7 +19,7 @@ except KeyError:
     st.error("API Key not found in Secrets. Please configure GEMINI_API_KEY in Streamlit settings.")
 
 # Use the 2026-appropriate mode
-model_genai = genai.GenerativeModel('gemini-3-flash')
+model_genai = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 # Classes based on common skin lesion datasets (e.g., HAM10000)
 CLASS_NAMES = [
