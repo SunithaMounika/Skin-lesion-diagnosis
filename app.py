@@ -5,6 +5,8 @@ from PIL import Image
 import google.generativeai as genai
 import cv2
 import numpy as np
+import os
+os.environ["GOOGLE_API_USE_MTLS_ENDPOINT"] = "never"
 
 # --- 1. Configuration & Setup ---
 st.set_page_config(page_title="Skin Lesion Diagnostic AI", layout="centered")
